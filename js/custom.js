@@ -246,7 +246,7 @@ $('.fb-share').click(function() {
             description: (
                 'Canary is a cannabis delivery service - the easiest way to buy cannabis. Launching late 2014 in Seattle and Denver.'
             ),
-            link: 'http://itsmegh.com/canary/',
+            link: 'http://trycanary.co',
             picture: 'http://i.imgur.com/kOdOXPY.png'
         },
         function(response) {
@@ -258,7 +258,7 @@ $('.fb-share').click(function() {
     );
 });
 
-$('.twitter-share').attr('href', 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location) + '&hashtags=canaryapp')
+$('.twitter-share').attr('href', 'https://twitter.com/intent/tweet?url=' + encodeURIComponent('http://trycanary.co') + '&hashtags=canaryapp')
                     .click(function(){
     console.log('Twitter post was tweeted.');
     _gaq.push(['_trackEvent', 'Social Sharing', 'shared on twitter']);
