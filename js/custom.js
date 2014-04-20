@@ -21,7 +21,7 @@ $('.mailchimp').ajaxChimp({
 function mailchimpCallback(resp) {
     if (resp.result === 'success') {
         $('.subscription-success').html('<i class="icon_check_alt2"></i><br/>' + resp.msg).slideDown(500);
-        _gaq.push(['_trackEvent', 'Mailchimp Signup', 'submitted']);
+        ga('send', 'event', 'Mailchimp Signup', 'submitted');
         $('.subscription-error').fadeOut(500);
 
     } else if (resp.result === 'error') {
@@ -252,7 +252,7 @@ $('.fb-share').click(function() {
         function(response) {
             if (response && response.post_id) {
                 console.log('Facebook post was published.');
-                _gaq.push(['_trackEvent', 'Social Sharing', 'shared on facebook']);
+                ga('send', 'event', 'Social Sharing', 'shared on facebook');
             }
         }
     );
@@ -261,7 +261,7 @@ $('.fb-share').click(function() {
 $('.twitter-share').attr('href', 'https://twitter.com/intent/tweet?url=' + encodeURIComponent('http://trycanary.co') + '&hashtags=canaryapp')
                     .click(function(){
     console.log('Twitter post was tweeted.');
-    _gaq.push(['_trackEvent', 'Social Sharing', 'shared on twitter']);
+    ga('send', 'event', 'Social Sharing', 'shared on twitter');
 });
 
 /* =================================
