@@ -245,8 +245,8 @@ $('.fb-share').click(function() {
             description: (
                 'Canary is a cannabis delivery service - the easiest way to buy cannabis. Launching late 2014 in Seattle and Denver.'
             ),
-            link: window.location,
-            picture: 'http://itsmegh.com/canary/'
+            link: 'http://itsmegh.com/canary/',
+            picture: 'http://i.imgur.com/kOdOXPY.png'
         },
         function(response) {
             if (response && response.post_id) {
