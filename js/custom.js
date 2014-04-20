@@ -20,12 +20,12 @@ $('.mailchimp').ajaxChimp({
 
 function mailchimpCallback(resp) {
     if (resp.result === 'success') {
-        $('.subscription-success').html('<i class="icon_check_alt2"></i><br/>' + resp.msg).fadeIn(1000);
+        $('.subscription-success').html('<i class="icon_check_alt2"></i><br/>' + resp.msg).slideDown(500);
         _gaq.push(['_trackEvent', 'Mailchimp Signup', 'submitted']);
         $('.subscription-error').fadeOut(500);
 
     } else if (resp.result === 'error') {
-        $('.subscription-error').html('<i class="icon_close_alt2"></i><br/>' + resp.msg).fadeIn(1000);
+        $('.subscription-error').html('<i class="icon_close_alt2"></i><br/>' + resp.msg).slideDown(500);
     }
 }
 
