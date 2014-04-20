@@ -240,15 +240,13 @@ $("#contact").submit(function(e) {
 $('.fb-share').click(function() {
     FB.ui({
             method: 'feed',
-            name: 'The Facebook SDK for Javascript',
-            caption: 'Bringing Facebook to the desktop and mobile web',
+            name: 'Canary',
+            caption: 'your cannabis, now',
             description: (
-                'A small JavaScript library that allows you to harness ' +
-                'the power of Facebook, bringing the user\'s identity, ' +
-                'social graph and distribution power to your site.'
+                'Canary is a cannabis delivery service - the easiest way to buy cannabis. Launching late 2014 in Seattle and Denver.'
             ),
-            link: 'https://developers.facebook.com/docs/reference/javascript/',
-            picture: 'http://www.fbrell.com/public/f8.jpg'
+            link: window.location,
+            picture: 'http://itsmegh.com/canary/'
         },
         function(response) {
             if (response && response.post_id) {
