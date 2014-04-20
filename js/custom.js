@@ -3,98 +3,102 @@
 =================================== */
 // makes sure the whole site is loaded
 jQuery(window).load(function() {
-        // will first fade out the loading animation
-	jQuery(".status").fadeOut();
-        // will fade out the whole DIV that covers the website.
-	jQuery(".preloader").delay(1000).fadeOut("slow");
+    // will first fade out the loading animation
+    jQuery(".status").fadeOut();
+    // will fade out the whole DIV that covers the website.
+    jQuery(".preloader").delay(1000).fadeOut("slow");
 })
-
 
 /* =================================
 ===  MAILCHIMP                 ====
 =================================== */
 
-/* Updated with Canary Mailchimp list */
 $('.mailchimp').ajaxChimp({
     callback: mailchimpCallback,
-    url: "http://facebook.us8.list-manage2.com/subscribe/post?u=4e3ed7214c91ab7caac74aa7d&amp;id=e5f4121811" //Replace this with your own mailchimp post URL. Don't remove the "". Just paste the url inside "".  
+    url: "http://webdesign7.us6.list-manage.com/subscribe/post?u=9445a2e155b82208d73433060&amp;id=16dc80e353" //Replace this with your own mailchimp post URL. Don't remove the "". Just paste the url inside "".  
 });
 
 function mailchimpCallback(resp) {
-     if (resp.result === 'success') {
-        $('.subscription-success').html('<i class="icon_check_alt2"></i><br/>' + resp.msg).slideDown(550);
+    if (resp.result === 'success') {
+        $('.subscription-success').html('<i class="icon_check_alt2"></i><br/>' + resp.msg).fadeIn(1000);
         $('.subscription-error').fadeOut(500);
-        
-    } else if(resp.result === 'error') {
-        $('.subscription-error').html('<i class="icon_close_alt2"></i><br/>' + resp.msg).slideDown(550);
-    }  
-}
 
+    } else if (resp.result === 'error') {
+        $('.subscription-error').html('<i class="icon_close_alt2"></i><br/>' + resp.msg).fadeIn(1000);
+    }
+}
 
 /* =================================
 ===  STICKY NAV                 ====
 =================================== */
 
 $(document).ready(function() {
-  $('.main-navigation').onePageNav({
-    scrollThreshold: 0.2, // Adjust if Navigation highlights too early or too late
-    scrollOffset: 60 //Height of Navigation Bar
-  });
-  
+    $('.main-navigation').onePageNav({
+        scrollThreshold: 0.2, // Adjust if Navigation highlights too early or too late
+        scrollOffset: 60 //Height of Navigation Bar
+    });
+
 });
 
 /* NAVIGATION VISIBLE ON SCROLL */
 
-$(document).ready(function () {
+$(document).ready(function() {
     mainNav();
 });
 
-$(window).scroll(function () {
+$(window).scroll(function() {
     mainNav();
 });
 
 if (matchMedia('(min-width: 992px), (max-width: 767px)').matches) {
-  function mainNav() {
+    function mainNav() {
         var top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-        if (top > 40) $('.sticky-navigation').stop().animate({"top": '0'}, 220);
+        if (top > 40) $('.sticky-navigation').stop().animate({
+            "top": '0'
+        });
 
-        else $('.sticky-navigation').stop().animate({"top": '-60'}, 220);
+        else $('.sticky-navigation').stop().animate({
+            "top": '-60'
+        });
     }
 }
 
 if (matchMedia('(min-width: 768px) and (max-width: 991px)').matches) {
-  function mainNav() {
+    function mainNav() {
         var top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-        if (top > 40) $('.sticky-navigation').stop().animate({"top": '0'}, 220);
+        if (top > 40) $('.sticky-navigation').stop().animate({
+            "top": '0'
+        });
 
-        else $('.sticky-navigation').stop().animate({"top": '-120'}, 220);
+        else $('.sticky-navigation').stop().animate({
+            "top": '-120'
+        });
     }
 }
-
 
 
 /* =================================
 ===  DOWNLOAD BUTTON CLICK SCROLL ==
 =================================== */
-jQuery(function( $ ){
-			$('#download-button').localScroll({
-				duration:1000
-			});
-		});
+jQuery(function($) {
+    $('#download-button').localScroll({
+        duration: 1000
+    });
+});
 
 
 /* =================================
 ===  FULL SCREEN HEADER         ====
 =================================== */
 function alturaMaxima() {
-  var altura = $(window).height();
-  $(".full-screen").css('min-height',altura); 
-  
+    var altura = $(window).height();
+    $(".full-screen").css('min-height', altura);
+
 }
 
 $(document).ready(function() {
-  alturaMaxima();
-  $(window).bind('resize', alturaMaxima);
+    alturaMaxima();
+    $(window).bind('resize', alturaMaxima);
 });
 
 
@@ -103,12 +107,12 @@ $(document).ready(function() {
 =================================== */
 var scrollAnimationTime = 1200,
     scrollAnimation = 'easeInOutExpo';
-$('a.scrollto').bind('click.smoothscroll', function (event) {
+$('a.scrollto').bind('click.smoothscroll', function(event) {
     event.preventDefault();
     var target = this.hash;
     $('html, body').stop().animate({
         'scrollTop': $(target).offset().top
-    }, scrollAnimationTime, scrollAnimation, function () {
+    }, scrollAnimationTime, scrollAnimation, function() {
         window.location.hash = target;
     });
 });
@@ -117,17 +121,16 @@ $('a.scrollto').bind('click.smoothscroll', function (event) {
 /* =================================
 ===  WOW ANIMATION             ====
 =================================== */
-wow = new WOW(
-  {
+wow = new WOW({
     mobile: false
-  });
+});
 wow.init();
 
 
 /* =================================
 ===  OWL CROUSEL               ====
 =================================== */
-$(document).ready(function () {
+$(document).ready(function() {
 
     $("#feedbacks").owlCarousel({
 
@@ -155,7 +158,7 @@ $(document).ready(function () {
 /* =================================
 ===  Nivo Lightbox              ====
 =================================== */
-$(document).ready(function () {
+$(document).ready(function() {
 
     $('#screenshots a').nivoLightbox({
         effect: 'fadeScale',
@@ -167,7 +170,7 @@ $(document).ready(function () {
 /* =================================
 ===  SUBSCRIPTION FORM          ====
 =================================== */
-$("#subscribe").submit(function (e) {
+$("#subscribe").submit(function(e) {
     e.preventDefault();
     var email = $("#subscriber-email").val();
     var dataString = 'email=' + email;
@@ -182,7 +185,7 @@ $("#subscribe").submit(function (e) {
             type: "POST",
             url: "subscribe/subscribe.php",
             data: dataString,
-            success: function () {
+            success: function() {
                 $('.subscription-success').fadeIn(1000);
                 $('.subscription-error').fadeOut(500);
                 $('.hide-after').fadeOut(500);
@@ -200,7 +203,7 @@ $("#subscribe").submit(function (e) {
 /* =================================
 ===  CONTACT FORM          ====
 =================================== */
-$("#contact").submit(function (e) {
+$("#contact").submit(function(e) {
     e.preventDefault();
     var name = $("#name").val();
     var email = $("#email").val();
@@ -218,7 +221,7 @@ $("#contact").submit(function (e) {
             type: "POST",
             url: "sendmail.php",
             data: dataString,
-            success: function () {
+            success: function() {
                 $('.success').fadeIn(1000);
                 $('.error').fadeOut(500);
             }
@@ -231,8 +234,31 @@ $("#contact").submit(function (e) {
     return false;
 });
 
-
-
+/* =================================
+===  SHARE BUTTONS          ====
+=================================== */
+$('.fb-share').click(function() {
+    FB.ui({
+            method: 'feed',
+            name: 'The Facebook SDK for Javascript',
+            caption: 'Bringing Facebook to the desktop and mobile web',
+            description: (
+                'A small JavaScript library that allows you to harness ' +
+                'the power of Facebook, bringing the user\'s identity, ' +
+                'social graph and distribution power to your site.'
+            ),
+            link: 'https://developers.facebook.com/docs/reference/javascript/',
+            picture: 'http://www.fbrell.com/public/f8.jpg'
+        },
+        function(response) {
+            if (response && response.post_id) {
+                alert('Post was published.');
+            } else {
+                alert('Post was not published.');
+            }
+        }
+    );
+});
 
 /* =================================
 ===  EXPAND COLLAPSE            ====
@@ -246,8 +272,8 @@ $('.expand-form').simpleexpand({
 /* =================================
 ===  STELLAR                    ====
 =================================== */
-$(window).stellar({ 
-horizontalScrolling: false 
+$(window).stellar({
+    horizontalScrolling: false
 });
 
 
@@ -255,11 +281,11 @@ horizontalScrolling: false
 ===  Bootstrap Internet Explorer 10 in Windows 8 and Windows Phone 8 FIX
 =================================== */
 if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-  var msViewportStyle = document.createElement('style')
-  msViewportStyle.appendChild(
-    document.createTextNode(
-      '@-ms-viewport{width:auto!important}'
+    var msViewportStyle = document.createElement('style')
+    msViewportStyle.appendChild(
+        document.createTextNode(
+            '@-ms-viewport{width:auto!important}'
+        )
     )
-  )
-  document.querySelector('head').appendChild(msViewportStyle)
+    document.querySelector('head').appendChild(msViewportStyle)
 }
