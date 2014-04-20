@@ -260,6 +260,8 @@ $('.fb-share').click(function() {
     );
 });
 
+$('.twitter-share').attr('href', 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location) + '&hashtag=canaryapp');
+
 /* =================================
 ===  EXPAND COLLAPSE            ====
 =================================== */
