@@ -21,6 +21,7 @@ $('.mailchimp').ajaxChimp({
 function mailchimpCallback(resp) {
     if (resp.result === 'success') {
         $('.subscription-success').html('<i class="icon_check_alt2"></i><br/>' + resp.msg).fadeIn(1000);
+        _gaq.push(['_trackEvent', 'Mailchimp Signup', 'submitted']);
         $('.subscription-error').fadeOut(500);
 
     } else if (resp.result === 'error') {
@@ -250,15 +251,18 @@ $('.fb-share').click(function() {
         },
         function(response) {
             if (response && response.post_id) {
-                alert('Post was published.');
-            } else {
-                alert('Post was not published.');
+                console.log('Facebook post was published.');
+                _gaq.push(['_trackEvent', 'Social Sharing', 'shared on facebook']);
             }
         }
     );
 });
 
-$('.twitter-share').attr('href', 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location) + '&hashtag=canaryapp');
+$('.twitter-share').attr('href', 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location) + '&hashtags=canaryapp')
+                    .click(function(){
+    console.log('Twitter post was tweeted.');
+    _gaq.push(['_trackEvent', 'Social Sharing', 'shared on twitter']);
+});
 
 /* =================================
 ===  EXPAND COLLAPSE            ====
