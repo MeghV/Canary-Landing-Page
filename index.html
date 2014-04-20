@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="description" content="Canary is a fast, mobile, discreet cannabis delivery service - launching in Washington, Colorado, ">
+      <meta name="keywords" content="4/20, Canary, marijuana delivery, marijuana, cannabis, pot, weed, kush, smoke, high, App, Mobile, Android, iOS, four twenty, blaze it, blaze, smoke, cannabis delivery, delivery">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <!-- SITE TITLE -->
+      <title>Canary - Your Cannabis, Now</title>
+      <!-- =========================
+         FAV AND TOUCH ICONS  
+         ============================== -->
+      <link rel="icon" href="images/favicon.ico">
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+      <!-- =========================
+         STYLESHEETS   
+         ============================== -->
+      <!-- BOOTSTRAP -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- FONT ICONS -->
+      <link rel="stylesheet" href="assets/elegant-icons/style.css">
+      <link rel="stylesheet" href="assets/app-icons/styles.css">
+      <!--[if lte IE 7]><script src="lte-ie7.js"></script><![endif]-->
+      <!-- WEB FONTS -->
+      <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,100italic,400,300italic' rel='stylesheet' type='text/css'>
+      <!-- CAROUSEL AND LIGHTBOX -->
+      <link rel="stylesheet" href="css/owl.theme.css">
+      <link rel="stylesheet" href="css/owl.carousel.css">
+      <link rel="stylesheet" href="css/nivo-lightbox.css">
+      <link rel="stylesheet" href="css/nivo_themes/default/default.css">
+      <!-- ANIMATIONS -->
+      <link rel="stylesheet" href="css/animate.min.css">
+      <!-- CUSTOM STYLESHEETS -->
+      <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- COLORS -->
+      <!-- <link rel="stylesheet" href="css/colors/blue.css"> -->
+      <!-- <link rel="stylesheet" href="css/colors/red.css"> --> 
+      <link rel="stylesheet" href="css/colors/green.css">
+      <!-- <link rel="stylesheet" href="css/colors/purple.css"> --> 
+      <!-- <link rel="stylesheet" href="css/colors/orange.css"> --> 
+      <!-- <link rel="stylesheet" href="css/colors/blue-munsell.css"> --> 
+      <!-- <link rel="stylesheet" href="css/colors/slate.css"> --> 
+      <!-- <link rel="stylesheet" href="css/colors/yellow.css"> -->
+      <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+      <![endif]-->
+      <!-- JQUERY -->
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   </head>
+   <body>
+      <!-- Facebook popup -->
+      <div id="fb-root"></div>
+       <script>
+         window.fbAsyncInit = function() {
+           FB.init({
+             appId      : '239737206232081',
+             status     : true,
+             xfbml      : true
+           });
+         };
+
+         (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+       </script>
+      
+      <!-- =========================
+         PRE LOADER       
+         ============================== -->
+      <div class="preloader">
+         <div class="status">&nbsp;</div>
+      </div>
+      <!-- =========================
+         HEADER   
+         ============================== -->
+      <header class="header" data-stellar-background-ratio="0.5" id="home">
+         <!-- COLOR OVER IMAGE -->
+         <div class="color-overlay">
+            <!-- To make header full screen. Use .full-screen class with color overlay. Example: <div class="color-overlay full-screen">  -->
+            <!-- STICKY NAVIGATION -->
+            <div class="navbar navbar-inverse bs-docs-nav navbar-fixed-top sticky-navigation">
+               <div class="container">
+                  <div class="navbar-header">
+                     <!-- LOGO ON STICKY NAV BAR -->
+                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#kane-navigation">
+                     <span class="sr-only">Toggle navigation</span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     </button>
+                     <a class="navbar-brand" href="#"><img src="images/canary_white_withtext_shorter.png" alt=""></a>
+                  </div>
+                  <!-- NAVIGATION LINKS -->
+                  <div class="navbar-collapse collapse" id="kane-navigation">
+                     <ul class="nav navbar-nav navbar-right main-navigation">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#screenshot-section">Screenshots</a></li>
+                        <li><a href="#stay-updated">JOIN</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- /END CONTAINER -->
+            </div>
+            <!-- /END STICKY NAVIGATION -->
+            <!-- CONTAINER -->
+            <div class="container">
+               <!-- ONLY LOGO ON HEADER -->
+               <div class="only-logo">
+                  <div class="navbar">
+                     <div class="navbar-header">
+                        <img src="images/canary_white_withtext_shorter.png" alt="">
+                     </div>
+                  </div>
+               </div>
+               <!-- /END ONLY LOGO ON HEADER -->
+               <div class="row home-contents">
+                  <div class="col-md-6 col-sm-6">
+                     <!-- HEADING AND BUTTONS -->
+                     <div class="intro-section">
+                        <!-- WELCOM MESSAGE -->
+                        <h1 class="intro">The easiest way to buy cannabis.</h1>
+                        <h5>Launching in Seattle and Denver later this year</h5>
+                        <!-- BUTTON -->
+                        <section class="download">
+                           <!-- SUBSCRIPTION FORM WITH TITLE -->
+                           <div class="subscription-form-container">
+                              <!-- =====================
+                                 MAILCHIMP FORM STARTS 
+                                 ===================== -->
+                              <form class="subscription-form mailchimp form-inline wow fadeInRight animated animated" data-wow-offset="10" data-wow-duration="1.5s" role="form" novalidate="true" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
+                                 <!-- SUBSCRIPTION SUCCESSFUL OR ERROR MESSAGES -->
+                                 <h4 class="subscription-success"></h4>
+                                 <h4 class="subscription-error"></h4>
+                                 <!-- EMAIL INPUT BOX -->
+                                 <input type="email" name="EMAIL" id="subscriber-email" placeholder="Your Email" class="form-control input-box">
+                                 <!-- SUBSCRIBE BUTTON -->
+                                 <button type="submit" id="subscribe-button" class="btn btn-default standard-button">Join the movement</button>
+                              </form>
+                              <!-- /END MAILCHIMP FORM STARTS -->
+                           </div>
+                           <!-- END OF SUBSCRIPTION FORM WITH TITLE -->
+                           <!-- /END CONTAINER -->
+                           <!-- /END COLOR OVERLAY -->
+                        </section>
+                        <!-- /END BUTTONS -->
+                     </div>
+                     <!-- /END HEADNING AND BUTTONS -->
+                  </div>
+                  <div class="col-md-6 col-sm-6 hidden-xs">
+                     <!-- PHONE IMAGE WILL BE HIDDEN IN TABLET PORTRAIT AND MOBILE-->
+                     <div class="phone-image">
+                        <img src="images/2-iphone-right.png" class="img-responsive" alt="">
+                     </div>
+                  </div>
+               </div>
+               <!-- /END ROW -->
+            </div>
+            <!-- /END CONTAINER -->
+         </div>
+         <!-- /END COLOR OVERLAY -->
+      </header>
+      <!-- /END HEADER -->
+      <!-- =========================
+         FEATURES 
+         ============================== -->
+      <section class="features" id="features">
+         <div class="container">
+            <!-- SECTION HEADER -->
+            <div class="section-header wow fadeIn animated" data-wow-offset="120" data-wow-duration="1.5s">
+               <!-- SECTION TITLE -->
+               <h2 class="white-text">Simple, Fast Cannabis Delivery</h2>
+               <div class="colored-line">
+               </div>
+               <div class="section-description">
+                  Prohibition is over. We're here to deliver your highs in the new era.  
+               </div>
+               <div class="colored-line">
+               </div>
+            </div>
+            <!-- /END SECTION HEADER -->
+            <div class="row">
+               <!-- FEATURES LEFT -->
+               <div class="col-md-4 col-sm-4 features-left wow fadeInLeft animated" data-wow-offset="10" data-wow-duration="1.5s">
+                  <!-- FEATURE -->
+                  <div class="feature">
+                     <!-- ICON -->
+                     <div class="icon-container">
+                        <div class="icon">
+                           <i class="icon_map_alt"></i>
+                        </div>
+                     </div>
+                     <!-- FEATURE HEADING AND DESCRIPTION -->
+                     <div class="fetaure-details">
+                        <h4 class="main-color">Right to Your Door</h4>
+                        <p>
+                           We know you don't want to leave the house on the weekends. With Canary, you don't have to. Products are delivered to the location of your choice.
+                        </p>
+                     </div>
+                  </div>
+                  <!-- /END SINGLE FEATURE -->
+                  <!-- FEATURE -->
+                  <div class="feature">
+                     <!-- ICON -->
+                     <div class="icon-container">
+                        <div class="icon">
+                           <i class="icon_like"></i>
+                        </div>
+                     </div>
+                     <!-- FEATURE HEADING AND DESCRIPTION -->
+                     <div class="fetaure-details">
+                        <h4 class="main-color">24/7 Availability</h4>
+                        <p>
+                           No more worrying about dispensary business hours, Canary deliveries never sleep. 24 hours a day, 7 days a week.
+                        </p>
+                     </div>
+                  </div>
+                  <!-- /END SINGLE FEATURE -->
+                  <!-- FEATURE -->
+                  <div class="feature">
+                     <!-- ICON -->
+                     <div class="icon-container">
+                        <div class="icon">
+                           <i class="icon_mobile"></i>
+                        </div>
+                     </div>
+                     <!-- FEATURE HEADING AND DESCRIPTION -->
+                     <div class="fetaure-details">
+                        <h4 class="main-color">Painless Verification</h4>
+                        <p>
+                           Sign up takes seconds, and verifying your status as a legal cannabis user is as easy as scanning your ID when you register. We won't ask you to do it again.
+                        </p>
+                     </div>
+                  </div>
+                  <!-- /END SINGLE FEATURE -->
+               </div>
+               <!-- /END FEATURES LEFT -->
+               <!-- PHONE IMAGE -->
+               <div class="col-md-4 col-sm-4">
+                  <div class="phone-image wow bounceIn animated" data-wow-offset="120" data-wow-duration="1.5s">
+                     <img src="images/screenshots/confirmation.png" alt="Mockup screenshot of Canary order confirmation screen">
+                  </div>
+               </div>
+               <!-- FEATURES RIGHT -->
+               <div class="col-md-4 col-sm-4 features-right wow fadeInRight animated" data-wow-offset="10" data-wow-duration="1.5s">
+                  <!-- FEATURE -->
+                  <div class="feature">
+                     <!-- ICON -->
+                     <div class="icon-container">
+                        <div class="icon">
+                           <i class="icon_clock_alt"></i>
+                        </div>
+                     </div>
+                     <!-- FEATURE HEADING AND DESCRIPTION -->
+                     <div class="fetaure-details">
+                        <h4 class="main-color">Safe and Reliable</h4>
+                        <p>
+                           Canary is your source for safe, effective and delicious cannabis products. Ordering takes minutes and delivery is usually within the hour.
+                        </p>
+                     </div>
+                  </div>
+                  <!-- /END SINGLE FEATURE -->
+                  <!-- FEATURE -->
+                  <div class="feature">
+                     <!-- ICON -->
+                     <div class="icon-container">
+                        <div class="icon">
+                           <i class="icon_grid-3x3"></i>
+                        </div>
+                     </div>
+                     <!-- FEATURE HEADING AND DESCRIPTION -->
+                     <div class="fetaure-details">
+                        <h4 class="main-color">Huge Selection</h4>
+                        <p>
+                           We're sourcing our strain attributes and reviews from a wide variety of partners. With Canary, you'll always have the most up-to-date selections.
+                        </p>
+                     </div>
+                  </div>
+                  <!-- /END SINGLE FEATURE -->
+                  <!-- FEATURE -->
+                  <div class="feature">
+                     <!-- ICON -->
+                     <div class="icon-container">
+                        <div class="icon">
+                           <i class="icon_heart"></i>
+                        </div>
+                     </div>
+                     <!-- FEATURE HEADING AND DESCRIPTION -->
+                     <div class="fetaure-details">
+                        <h4 class="main-color">Munchies</h4>
+                        <p>
+                           Our catalog includes popular food and drink items to satisfy your insatiable appetite. Yeah, we've thought of everything.
+                        </p>
+                     </div>
+                  </div>
+                  <!-- /END SINGLE FEATURE -->
+               </div>
+               <!-- /END FEATURES RIGHT -->
+            </div>
+            <!-- /END ROW -->
+         </div>
+         <!-- /END CONTAINER -->
+      </section>
+      <!-- /END FEATURES SECTION -->
+      
+      <!-- =========================
+         SERVICES
+         ============================== -->
+      <section class="services" id="how-it-works">
+         <div class="container">
+            <!-- SECTION HEADER -->
+            <div class="section-header wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+               <!-- SECTION TITLE -->
+               <h2 class="white-text">How It Works</h2>
+               <div class="colored-line">
+               </div>
+               <div class="section-description">
+                  You're only 3 steps away from delivery (after we know you're legit).
+               </div>
+               <div class="colored-line">
+               </div>
+            </div>
+            <!-- /END SECTION HEADER -->
+            <div class="row">
+               <!-- SINGLE SERVICE -->
+               <div class="col-md-3 single-service wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+                  <!-- SERVICE ICON -->
+                  <div class="service-icon">
+                     <i class="icon_id"></i>
+                  </div>
+                  <!-- SERVICE HEADING -->
+                  <h3>Verification</h3>
+                  <!-- SERVICE DESCRIPTION -->
+                  <p>
+                     Canary abides by all recreational and medicinal cannabis on a state-by-state basis. When you first sign on, we'll need proof that you're able to enjoy cannabis legally in your state - you'll take a picture of your ID or medicinal marijuana card during signup and send it to us for verification in-app. Once verified, you're good to order.
+                  </p>
+               </div>
+               <!-- /END SINGLE SERVICE -->
+               <!-- SINGLE SERVICE -->
+               <div class="col-md-3 single-service wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+                  <!-- SERVICE ICON -->
+                  <div class="service-icon">
+                     <i class=" icon_cart_alt"></i>
+                  </div>
+                  <!-- SERVICE HEADING -->
+                  <h3>Strains</h3>
+                  <!-- SERVICE DESCRIPTION -->
+                  <p>
+                     We believe that you should be able to explore and enjoy all strains of cannabis, not just the strains available at your local dispensary. We're partnering with dispensaries and producers to connect you with strains you love and strains you will love. You'll be able to order quantities in grams to ounces, depending on your state's cannabis laws.
+                  </p>
+               </div>
+               <!-- /END SINGLE SERVICE -->
+               <!-- SINGLE SERVICE -->
+               <div class="col-md-3 single-service wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+                  <!-- SERVICE ICON -->
+                  <div class="service-icon">
+                     <i class="icon_creditcard"></i>
+                  </div>
+                  <!-- SERVICE HEADING -->
+                  <h3>Pay</h3>
+                  <!-- SERVICE DESCRIPTION -->
+                  <p>
+                     Just like Uber, Postmates, Lyft, and your other favorite delivery services, payment occurs through your phone.
+                  </p>
+               </div>
+
+               <div class="col-md-3 single-service wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+                  <!-- SERVICE ICON -->
+                  <div class="service-icon">
+                     <i class="icon_map_alt"></i>
+                  </div>
+                  <!-- SERVICE HEADING -->
+                  <h3>Delivered</h3>
+                  <!-- SERVICE DESCRIPTION -->
+                  <p>
+                     Once you've ordered, we'll send our background-checked and legally employed couriers to deliver your cannabis to your chosen location within our delivery zones. 
+                  </p>
+               </div>
+               <!-- /END SINGLE SERVICE -->
+            </div>
+            <!-- /END ROW -->
+         </div>
+         <!-- /END CONTAINER -->
+      </section>
+      <!-- /END FEATURES SECTION -->
+      <!-- =========================
+         SCREENSHOTS
+         ============================== -->
+      <section class="screenshots deep-dark-bg" id="screenshot-section">
+         <div class="container">
+            <!-- SECTION HEADER -->
+            <div class="section-header wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+               <!-- SECTION TITLE -->
+               <h2 class="white-text">Mockups</h2>
+               <div class="colored-line">
+               </div>
+               <div class="section-description">
+                  Here's our vision for the Canary iPhone app
+               </div>
+               <div class="colored-line">
+               </div>
+            </div>
+            <!-- /END SECTION HEADER -->
+            <div class="row wow bounceIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+               <div id="screenshots" class="owl-carousel owl-theme">
+                  <div class="shot">
+                     <a href="images/screenshots/homescreen.png" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/homescreen.png" alt="Mockup of Canary login/register homescreen"></a>
+                  </div>
+                  <div class="shot">
+                     <a href="images/screenshots/catalog.png" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/catalog.png" alt="Mockup of Canary catalog"></a>
+                  </div>
+                  <div class="shot">
+                     <a href="images/screenshots/location.png" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/location.png" alt="Mockup of Canary location selection"></a>
+                  </div>
+                  <div class="shot">
+                     <a href="images/screenshots/confirmation.png" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/confirmation.png" alt="Mockup of Canary confirmation page"></a>
+                  </div>
+                  
+               </div>
+               <!-- /END SCREENSHOTS -->
+            </div>
+            <!-- /END ROW -->
+         </div>
+         <!-- /END CONTAINER -->
+      </section>
+      <!-- /END SCREENSHOTS SECTION -->
+      <!-- =========================
+         DOWNLOAD NOW 
+         ============================== -->
+      <section class="download" id="download">
+         <div class="color-overlay">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-8 col-md-offset-2">
+                     <!-- DOWNLOAD BUTTONS AREA -->
+                     <div class="download-container">
+                        <h2 class=" wow fadeInLeft animated" data-wow-offset="10" data-wow-duration="1.5s">Launching later this year in</h2>
+                        <!-- BUTTONS -->
+                        <div class="buttons wow fadeInRight animated" data-wow-offset="10" data-wow-duration="1.5s">
+                           <p class="btn btn-default btn-lg standard-button">Seattle</p>
+                           <p class="btn btn-default btn-lg standard-button">Denver</p>
+                        </div>
+                        <!-- /END BUTTONS -->
+                     </div>
+                     <!-- END OF DOWNLOAD BUTTONS AREA -->
+                     <!-- SUBSCRIPTION FORM WITH TITLE -->
+                     <div class="subscription-form-container">
+                        <h2 class="wow fadeInLeft animated" data-wow-offset="10" data-wow-duration="1.5s">Subscribe Now!</h2>
+                        <!-- =====================
+                           MAILCHIMP FORM STARTS 
+                           ===================== -->
+                        <form class="subscription-form mailchimp form-inline wow fadeInRight animated" data-wow-offset="10" data-wow-duration="1.5s" role="form">
+                           <!-- SUBSCRIPTION SUCCESSFUL OR ERROR MESSAGES -->
+                           <h4 class="subscription-success"></h4>
+                           <h4 class="subscription-error"></h4>
+                           <!-- EMAIL INPUT BOX -->
+                           <input type="email" name="email" id="subscriber-email" placeholder="Your Email" class="bottom-subscribe form-control input-box">
+                           <!-- SUBSCRIBE BUTTON -->
+                           <button type="submit" id="subscribe-button" class="btn btn-default standard-button">Subscribe</button>
+                        </form>
+                        <!-- /END MAILCHIMP FORM STARTS -->
+                        <!-- =====================
+                           LOCAL TXT FORM STARTS 
+                           ===================== -->
+                        <!-- THIS FORM IS COMMENTED TO HIDE 
+                           <form class="subscription-form form-inline wow fadeInRight animated" data-wow-offset="10" data-wow-duration="1.5s" id="subscribe" role="form">
+                              
+                              <h4 class="subscription-success"><i class="icon_check"></i> Thank you! We will notify you soon.</h4>
+                              <h4 class="subscription-error">Something Wrong!</h4>
+                              
+                              <input type="email" name="email" id="subscriber-email" placeholder="Your Email" class="form-control input-box">
+                              
+                              <button type="submit" id="subscribe-button" class="btn btn-default standard-button">Subscribe</button>
+                              
+                           </form>
+                           
+                           -->
+                        <!-- / LOCAL TXT SAVING FORM END -->
+                     </div>
+                     <!-- END OF SUBSCRIPTION FORM WITH TITLE -->
+                  </div>
+                  <!-- END COLUMN -->
+               </div>
+               <!-- END ROW -->
+            </div>
+            <!-- /END CONTAINER -->
+         </div>
+         <!-- /END COLOR OVERLAY -->
+      </section>
+      <!-- /END DOWNLOAD SECTION -->
+      <!-- =========================
+         FOOTER 
+         ============================== -->
+      <footer>
+         <div class="container">
+
+            <!-- Mail icon -->
+            <div class="contact-box wow rotateIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+               <!-- CONTACT BUTTON TO EXPAND OR COLLAPSE FORM -->
+               <a class="btn contact-button expand-form"><i class="icon_mail_alt"></i></a>
+               <a class="btn contact-button fb-share "><i class="social_facebook"></i></a>
+               <a class="btn contact-button"><i class="social_twitter"></i></a>
+               <!-- EXPANDED CONTACT FORM -->
+               <div class="row expanded-contact-form">
+                  <div class="col-md-8 col-md-offset-2">
+                     <!-- FORM -->
+                     <form class="contact-form" id="contact" role="form">
+                        <!-- IF MAIL SENT SUCCESSFULLY -->
+                        <h4 class="success">
+                           <i class="icon_check"></i> Your message has been sent successfully.
+                        </h4>
+                        <!-- IF MAIL SENDING UNSUCCESSFULL -->
+                        <h4 class="error">
+                           <i class="icon_error-circle_alt"></i> E-mail must be valid and message must be longer than 1 character.
+                        </h4>
+                        <div class="col-md-6">
+                           <input class="form-control input-box" id="name" type="text" name="name" placeholder="Your Name">
+                        </div>
+                        <div class="col-md-6">
+                           <input class="form-control input-box" id="email" type="email" name="email" placeholder="Your Email">
+                        </div>
+                        <div class="col-md-12">
+                           <input class="form-control input-box" id="subject" type="text" name="subject" placeholder="Subject">
+                           <textarea class="form-control textarea-box" id="message" rows="8" placeholder="Message"></textarea>
+                        </div>
+                        <button class="btn btn-primary standard-button2 ladda-button" type="submit" id="submit" name="submit" data-style="expand-left">Send Message</button>
+                     </form>
+                     <!-- /END FORM -->
+                  </div>
+               </div>
+               <!-- /END EXPANDED CONTACT FORM -->
+            </div>
+            <!-- /END CONTACT BOX -->
+            <!-- Started in Seattle logo -->
+            <a href="http://www.startedinseattle.com" target="_blank"><img alt="Started In Seattle" src="http://images.startedinseattle.com/badge_w_lg.png" width="125" height="46" /></a>
+            <!-- SOCIAL ICONS -->
+            <!-- <ul class="social-icons">
+               <li><a href=""><i class="social_facebook_square"></i></a></li>
+               <li><a href=""><i class="social_twitter_square"></i></a></li>
+               <li><a href=""><i class="social_pinterest_square"></i></a></li>
+               <li><a href=""><i class="social_googleplus_square"></i></a></li>
+               <li><a href=""><i class="social_instagram_square"></i></a></li>
+               <li><a href=""><i class="social_dribbble_square"></i></a></li>
+               <li><a href=""><i class="social_flickr_square"></i></a></li>
+            </ul> -->
+            <!-- COPYRIGHT TEXT -->
+
+            <p class="copyright">
+               Launching for iPhone and Android later this year
+               <br>
+               ©2014 Canary
+               
+            </p>
+
+         </div>
+         <!-- /END CONTAINER -->
+      </footer>
+      <!-- /END FOOTER -->
+      <!-- =========================
+         SCRIPTS 
+         ============================== -->
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/smoothscroll.js"></script>
+      <script src="js/jquery.scrollTo.min.js"></script>
+      <script src="js/jquery.localScroll.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/nivo-lightbox.min.js"></script>
+      <script src="js/simple-expand.min.js"></script>
+      <script src="js/wow.min.js"></script>
+      <script src="js/jquery.stellar.min.js"></script>
+      <script src="js/retina-1.1.0.min.js"></script>
+      <script src="js/jquery.nav.js"></script>
+      <script src="js/matchMedia.js"></script>
+      <script src="js/jquery.ajaxchimp.min.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+</html>
