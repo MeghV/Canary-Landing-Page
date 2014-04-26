@@ -238,30 +238,37 @@ $("#contact").submit(function(e) {
 /* =================================
 ===  SHARE BUTTONS          ====
 =================================== */
-$('.fb-share').click(function() {
-    FB.ui({
-            method: 'feed',
-            name: 'Canary',
-            caption: 'your cannabis, now',
-            description: (
-                'Canary is a cannabis delivery service - the easiest way to buy cannabis. Launching late 2014 in Seattle and Denver.'
-            ),
-            link: 'http://trycanary.co',
-            picture: 'http://i.imgur.com/kOdOXPY.png'
-        },
-        function(response) {
-            if (response && response.post_id) {
-                console.log('Facebook post was published.');
-                ga('send', 'event', 'Social Sharing', 'shared on facebook');
-            }
-        }
-    );
-});
+// $('.fb-share').click(function() {
+//     FB.ui({
+//             method: 'feed',
+//             name: 'Canary',
+//             caption: 'your cannabis, now',
+//             description: (
+//                 'Canary is a cannabis delivery service - the easiest way to buy cannabis. Launching late 2014 in Seattle and Denver.'
+//             ),
+//             link: 'http://trycanary.co',
+//             picture: 'http://i.imgur.com/kOdOXPY.png'
+//         },
+//         function(response) {
+//             if (response && response.post_id) {
+//                 console.log('Facebook post was published.');
+//                 ga('send', 'event', 'Social Sharing', 'shared on facebook');
+//             }
+//         }
+//     );
+// });
 
-$('.twitter-share').attr('href', 'https://twitter.com/intent/tweet?url=' + encodeURIComponent('http://trycanary.co') + '&hashtags=canaryapp')
-                    .click(function(){
-    console.log('Twitter post was tweeted.');
-    ga('send', 'event', 'Social Sharing', 'shared on twitter');
+// $('.twitter-share').attr('href', 'https://twitter.com/intent/tweet?url=' + encodeURIComponent('http://trycanary.co') + '&hashtags=canaryapp')
+//                     .click(function(){
+//     console.log('Twitter post was tweeted.');
+//     ga('send', 'event', 'Social Sharing', 'shared on twitter');
+// });
+
+$('.fb-share').click(function() {
+    ga('send', 'event', 'Clicked on social icons', 'looked at facebook');
+});
+$('.twitter-share').click(function() {
+    ga('send', 'event', 'Clicked on social icons', 'looked at twitter');
 });
 
 /* =================================

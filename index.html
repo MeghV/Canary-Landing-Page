@@ -67,25 +67,7 @@
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
    </head>
    <body>
-      <!-- Facebook popup -->
-      <div id="fb-root"></div>
-       <script>
-         window.fbAsyncInit = function() {
-           FB.init({
-             appId      : '239737206232081',
-             status     : true,
-             xfbml      : true
-           });
-         };
-
-         (function(d, s, id){
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {return;}
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/all.js";
-            fjs.parentNode.insertBefore(js, fjs);
-          }(document, 'script', 'facebook-jssdk'));
-       </script>
+      
       
       <!-- =========================
          PRE LOADER       
@@ -523,8 +505,8 @@
             <div class="contact-box wow rotateIn animated" data-wow-offset="10" data-wow-duration="1.5s">
                <!-- CONTACT BUTTON TO EXPAND OR COLLAPSE FORM -->
                <a class="btn contact-button expand-form"><i class="icon_mail_alt"></i></a>
-               <a class="btn contact-button fb-share "><i class="social_facebook"></i></a>
-               <a href="" class="btn contact-button twitter-share"><i class="social_twitter"></i></a>
+               <a class="btn contact-button fb-share " href="https://www.facebook.com/canarydelivery" target="_blank"><i class="social_facebook"></i></a>
+               <a class="btn contact-button twitter-share" href="https://twitter.com/trycanary" target="_blank"><i class="social_twitter"></i></a>
                <!-- EXPANDED CONTACT FORM -->
                <div class="row expanded-contact-form">
                   <div class="col-md-8 col-md-offset-2">
@@ -573,7 +555,9 @@
             <p class="copyright">
                Launching for iPhone and Android later this year.
                <br>
-               ©2014 Canary
+               <a href="mailto:hello@trycanary.co">hello@trycanary.co</a>
+               <br>
+               ©2014 Canary, LLC
                
             </p>
 
