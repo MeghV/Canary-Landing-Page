@@ -51,13 +51,13 @@ $(".dispensary-form").submit(function(e) {
                                             "dispensary-name": $("input[name='dispensary-name']").val(),
                                             "email": $("input[name='email']").val(),
                                             "number": $("input[name='number']").val()   });
-            sendEmail.done(function(data) {
-                console.log(data);
-                $(".subscription-error").slideUp(function() {
+            $(".subscription-error").slideUp(function() {
                     $(".subscription-success").text("Sent! We'll follow up with you in less than 24 hours!").slideDown();
                     sent = true;
                     $(".dispensary-form #subscribe-button").attr("disabled", "disabled");
                 });
+            sendEmail.done(function(data) {
+                console.log(data);
                 
                 
             });
