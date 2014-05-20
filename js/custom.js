@@ -1,13 +1,19 @@
+var sent = false;
 /* =================================
    LOADER                     
 =================================== */
 // makes sure the whole site is loaded
 jQuery(window).load(function() {
+    
     // will first fade out the loading animation
     jQuery(".status").fadeOut();
     // will fade out the whole DIV that covers the website.
     jQuery(".preloader").delay(1000).fadeOut("slow");
-})
+    $("input[name='full-name']").val(""); 
+    $("input[name='dispensary-name']").val("");
+    $("input[name='email']").val("");
+    $("input[name='number']").val("");
+});
 
 /* =================================
 ===  MAILCHIMP                 ====
@@ -28,6 +34,40 @@ function mailchimpCallback(resp) {
         $('.subscription-error').html('<i class="icon_close_alt2"></i><br/>' + resp.msg).slideDown(500);
     }
 }
+
+/* =================================
+===  DISPENSARY FORM            ====
+=================================== */
+$(".dispensary-form").submit(function(e) {
+    e.preventDefault;
+    if($("input[name='full-name']").val() !== '' &&  
+        $("input[name='dispensary-name']").val() !== '' &&
+        $("input[name='email']").val() !== '' &&
+        $("input[name='number']").val() !== '') {
+        console.log("post to php");
+        if(!sent) {
+
+            var sendEmail = $.post("dispensary.php", { "full-name": $("input[name='full-name']").val(),
+                                            "dispensary-name": $("input[name='dispensary-name']").val(),
+                                            "email": $("input[name='email']").val(),
+                                            "number": $("input[name='number']").val()   });
+            sendEmail.done(function(data) {
+                console.log(data);
+                $(".subscription-error").slideUp(function() {
+                    $(".subscription-success").text("Sent! We'll follow up with you in less than 24 hours!").slideDown();
+                    sent = true;
+                    $(".dispensary-form #subscribe-button").attr("disabled", "disabled");
+                });
+                
+                
+            });
+        }
+    } else {
+        $(".subscription-error").text("Please fill out all parts of the form!").slideDown();
+    }
+    return false;
+});
+
 
 /* =================================
 ===  STICKY NAV                 ====

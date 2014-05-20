@@ -290,6 +290,9 @@ header .full-screen {
     height: 100px;
 }
 
+.header-partners {
+    background: none;
+}
 /* TOP BAR WITH NAVIGATION */
 
 .sticky-navigation {
@@ -368,6 +371,12 @@ header .intro-section .buttons {
     margin-top: 35px;
 }
 
+.btn-partners {
+    margin: 35px auto;
+}
+#partners-text {
+    color: white;
+}
 /*---------------------------------------
    SECTION:  FEATURES                 
 -----------------------------------------*/
