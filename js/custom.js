@@ -84,6 +84,10 @@ $(document).ready(function() {
 $("#go-to-business").click(function() {
     window.open("http://trycanary.co/partners", "_blank");
 });
+
+$("#go-to-consumer").click(function() {
+    window.open("http://trycanary.co/", "_blank");
+});
 /* NAVIGATION VISIBLE ON SCROLL */
 
 $(document).ready(function() {
