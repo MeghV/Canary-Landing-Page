@@ -19,11 +19,9 @@ if ( isset($_POST['email']) && isset($_POST['full-name']) && isset($_POST['dispe
 
   $message = "Full Name: $name\r\nDispensary Name: $subject\r\nEmail: $email\r\Number: $number";
   // //
-  echo $message;
+  // echo $message;
   mail( "meghhv@gmail.com", $subject, $message, "From:" . $_POST['email'] );
- 
-  //      ^
-  //  Replace with your email 
+  file_put_contents('subscribe/email-list.txt', $message, FILE_APPEND | LOCK_EX);
   
 }
 ?>
