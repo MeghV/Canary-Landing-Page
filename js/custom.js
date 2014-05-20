@@ -66,7 +66,7 @@ $(".dispensary-form").submit(function(e) {
                 
                 
             });
-            sendEmail.error(function(data) {
+            sendEmail.fail(function(data) {
                 $(".subscription-error").slideUp(function() {
                     $(".subscription-success").text("Uh oh... there was an error sending the email. Please email us at hello@trycanary.co!").slideDown();
                     sent = true;
