@@ -17,11 +17,11 @@ if ( isset($_POST['email']) && isset($_POST['full-name']) && isset($_POST['dispe
   $email = $_POST['email'];
   $number = $_POST['number'];
 
-  $message = "Full Name: $name\r\nDispensary Name: $subject\r\nEmail: $email\r\Number: $number";
+  $message = "Full Name: $name\r\nDispensary Name: $subject\r\nEmail: $email\r\nNumber: $number";
   // //
   // echo $message;
   mail( "meghhv@gmail.com", $subject, $message, "From:" . $_POST['email'] );
-  file_put_contents('subscribe/email-list.txt', $message, FILE_APPEND | LOCK_EX);
+  file_put_contents('/var/www/subscribe/email-list.txt', $message . "," . "\n", FILE_APPEND | LOCK_EX);
   
 }
 ?>
