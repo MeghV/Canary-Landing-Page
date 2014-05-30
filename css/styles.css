@@ -623,17 +623,14 @@ header .intro-section .buttons {
 }
 
 .download .color-overlay {
-    padding-top: 110px;
-    padding-bottom: 70px;
+    padding-top: 80px;
+    padding-bottom: 85px;
 }
 
 .download .download-container {
     padding-bottom: 80px;
 }
 
-.download .subscription-form-container {
-    padding-bottom: 80px;
-}
 
 .download .subscription-form .input-box {
     height: 57px;
@@ -704,6 +701,10 @@ footer .contact-box .expanded-contact-form {
 footer .contact-box .expanded-contact-form .success,
 footer .contact-box .expanded-contact-form .error {
     display: none;
+}
+
+.email-hover:hover {
+    text-decoration: underline;
 }
 
 footer .contact-box .expanded-contact-form .input-box {
