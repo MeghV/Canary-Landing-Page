@@ -622,9 +622,17 @@ header .intro-section .buttons {
     text-align: center;
 }
 
+.download.courier .courier-page.color-overlay {
+    padding-top: 50px;
+}
+
 .download .color-overlay {
     padding-top: 80px;
     padding-bottom: 85px;
+}
+
+#courier-apply {
+    margin-bottom: 30px;
 }
 
 .download .download-container {

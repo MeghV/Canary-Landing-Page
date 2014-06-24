@@ -592,10 +592,15 @@ header .intro-section .buttons {
     color: #ffffff;
 }
 
+.download.courier .courier-page.color-overlay {
+    padding-top: 50px;
+}
+
 .download .color-overlay {
     padding-top: 110px;
     padding-bottom: 70px;
 }
+
 
 .download .download-container {
     padding-bottom: 80px;

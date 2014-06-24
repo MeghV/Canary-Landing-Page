@@ -70,6 +70,19 @@ $(".dispensary-form").submit(function(e) {
 
 
 /* =================================
+===  COURIER FORM            ====
+=================================== */
+$("#courier-apply, .apply-bottom").click(function(e) {
+    e.preventDefault();
+    var email = $("#courier-email").val().trim() || $(".bottom-courier-email").val().trim();
+    var name  = $("#courier-name").val().trim();
+    var numb  = $("#courier-number").val().trim();
+    window.location = "https://docs.google.com/forms/d/1OAT-1DZ95gJT6YE4xstHLDLytD817ZXa8T3RldyVKxc/viewform?entry.1871608623=" + email + "&entry.422635318=" + name + "&entry.704730855=" + numb;
+
+});
+
+
+/* =================================
 ===  STICKY NAV                 ====
 =================================== */
 
