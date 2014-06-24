@@ -101,6 +101,10 @@ $("#go-to-business").click(function() {
 $("#go-to-consumer").click(function() {
     window.open("http://trycanary.co/", "_blank");
 });
+
+$("#go-to-courier").click(function() {
+    window.open("http://trycanary.co/couriers", "_blank");
+});
 /* NAVIGATION VISIBLE ON SCROLL */
 
 $(document).ready(function() {
