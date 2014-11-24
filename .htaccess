@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# Redirect Entire Site to New Domain
+RewriteCond %{HTTP_HOST} ^trycanary.co$ [NC]
+RewriteRule ^(.*)$ http://canarydelivers.com/$1 [R=301,L]
