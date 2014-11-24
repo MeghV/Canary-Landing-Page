@@ -39,3 +39,7 @@ Thumbs.db
 sitemap.xml
 
 .htaccess
+
+google*.html
+
+www/
