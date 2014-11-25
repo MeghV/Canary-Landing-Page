@@ -95,15 +95,15 @@ $(document).ready(function() {
 });
 
 $("#go-to-business").click(function() {
-    window.open("http://trycanary.co/partners", "_blank");
+    window.open("http://canarydelivers.com/partners", "_blank");
 });
 
 $("#go-to-consumer").click(function() {
-    window.open("http://trycanary.co/", "_blank");
+    window.open("http://canarydelivers.com/", "_blank");
 });
 
 $("#go-to-courier").click(function() {
-    window.open("http://trycanary.co/couriers", "_blank");
+    window.open("http://canarydelivers.com/couriers", "_blank");
 });
 /* NAVIGATION VISIBLE ON SCROLL */
 
@@ -170,17 +170,17 @@ $(document).ready(function() {
 /* =================================
 ===  SMOOTH SCROLL             ====
 =================================== */
-// var scrollAnimationTime = 1200,
-//     scrollAnimation = 'easeInOutExpo';
-// $('a.scrollto').bind('click.smoothscroll', function(event) {
-//     event.preventDefault();
-//     var target = this.hash;
-//     $('html, body').stop().animate({
-//         'scrollTop': $(target).offset().top
-//     }, scrollAnimationTime, scrollAnimation, function() {
-//         window.location.hash = target;
-//     });
-// });
+var scrollAnimationTime = 1200,
+    scrollAnimation = 'easeInOutExpo';
+$('a.scrollto').bind('click.smoothscroll', function(event) {
+    event.preventDefault();
+    var target = this.hash;
+    $('html, body').stop().animate({
+        'scrollTop': $(target).offset().top
+    }, scrollAnimationTime, scrollAnimation, function() {
+        window.location.hash = target;
+    });
+});
 
 
 /* =================================
