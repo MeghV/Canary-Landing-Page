@@ -762,3 +762,10 @@ footer .copyright {
     padding-top: 10px;
     margin-bottom: 50px;
 }
+
+.toc-text {
+    margin: 50px auto 100px auto;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
