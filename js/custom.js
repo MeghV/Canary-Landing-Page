@@ -47,9 +47,9 @@ $(".number-form").submit(function(e) {
         $(".subscription-error").slideUp()
         console.log("Submitted w. phone #:" + number);
 
-        $.post({
-            url: "https://api.canarydelivers.com/api/registernumber",
-            data: { "phoneNumber" : number },
+        $.ajax({
+            type: "POST",
+            url: "https://api.canarydelivers.com/api/registernumber?phoneNumber=" + number,
             success: function(data) {
                 println(data)
                 if(data["Code"] == 0) {
@@ -62,7 +62,7 @@ $(".number-form").submit(function(e) {
                     $(".subscription-error").slideDown().text("Please enter a valid phone number.");
                 }
             },
-            dataType: 'json'
+            dataType: 'jsonp'
         });
 
     } else {
