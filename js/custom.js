@@ -63,7 +63,7 @@ $(".number-form").submit(function(e) {
                     $(".subscription-error").slideDown().text("Please enter a valid phone number.");
                 }
             },
-            dataType: 'jsonp'
+            dataType: 'json'
         });
 
     } else {
