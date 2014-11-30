@@ -162,6 +162,7 @@ h4 {
     font-size: 20px;
     line-height: 30px;
     font-weight: 300;
+    color: white;
 }
 
 h5 {
@@ -622,6 +623,10 @@ header .intro-section .buttons {
     text-align: center;
 }
 
+.number-input {
+    text-align: left;
+}
+
 .download.courier .courier-page.color-overlay {
     padding-top: 50px;
 }
@@ -660,6 +665,10 @@ header .intro-section .buttons {
 .download .subscription-form .subscription-success,
 .download .subscription-form .subscription-error {
     display: none;
+}
+
+.number-form .subscription-error {
+    font-size: 15px;
 }
 
 .download h2 {

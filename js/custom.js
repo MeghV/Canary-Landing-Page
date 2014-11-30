@@ -13,6 +13,8 @@ jQuery(window).load(function() {
     $("input[name='dispensary-name']").val("");
     $("input[name='email']").val("");
     $("input[name='number']").val("");
+    $(".number-input").val("")
+    
 });
 
 /* =================================
@@ -34,6 +36,40 @@ function mailchimpCallback(resp) {
         $('.subscription-error').html('<i class="icon_close_alt2"></i><br/>' + resp.msg).slideDown(500);
     }
 }
+
+/* =================================
+===  PHONE NUMBER BOX          ====
+=================================== */
+$(".number-form").submit(function(e) {
+    // e.preventDefault;
+    var number = $(".number-input").val().trim();
+    if(number !== '' && /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/.test(number)) {
+        $(".subscription-error").slideUp()
+        console.log("Submitted w. phone #:" + number);
+
+        $.post({
+            url: "https://api.canarydelivers.com/api/registernumber",
+            data: { "phoneNumber" : number },
+            success: function(data) {
+                println(data)
+                if(data["Code"] == 0) {
+                    $(".subscription-error").slideUp()
+                    $(".subscription-success").slideDown().text("You're good to go. We'll text you a link to Canary soon!")
+                    $(".number-form button[type=submit]").click(function(e) {
+                        e.preventDefault;
+                    });
+                } else if(data["Code"] == 1) {
+                    $(".subscription-error").slideDown().text("Please enter a valid phone number.");
+                }
+            },
+            dataType: 'json'
+        });
+
+    } else {
+        $(".subscription-error").slideDown().text("Please enter a valid phone number.");   
+    }
+    return false;
+});
 
 /* =================================
 ===  DISPENSARY FORM            ====
@@ -94,17 +130,17 @@ $(document).ready(function() {
 
 });
 
-$("#go-to-business").click(function() {
-    window.open("http://canarydelivers.com/partners", "_blank");
-});
+// $("#go-to-business").click(function() {
+//     window.open("http://canarydelivers.com/partners", "_blank");
+// });
 
-$("#go-to-consumer").click(function() {
-    window.open("http://canarydelivers.com/", "_blank");
-});
+// $("#go-to-consumer").click(function() {
+//     window.open("http://canarydelivers.com/", "_blank");
+// });
 
-$("#go-to-courier").click(function() {
-    window.open("http://canarydelivers.com/couriers", "_blank");
-});
+// $("#go-to-courier").click(function() {
+//     window.open("http://canarydelivers.com/couriers", "_blank");
+// });
 /* NAVIGATION VISIBLE ON SCROLL */
 
 $(document).ready(function() {
@@ -173,6 +209,7 @@ $(document).ready(function() {
 var scrollAnimationTime = 1200,
     scrollAnimation = 'easeInOutExpo';
 $('a.scrollto').bind('click.smoothscroll', function(event) {
+    console.log($(this))
     event.preventDefault();
     var target = this.hash;
     $('html, body').stop().animate({
@@ -182,7 +219,12 @@ $('a.scrollto').bind('click.smoothscroll', function(event) {
     });
 });
 
-
+$("a.reallink").unbind('click.smoothscroll', function() {
+    $(this).bind('click', function(e) {
+        console.log('activated');
+        return true;
+    })
+})
 /* =================================
 ===  WOW ANIMATION             ====
 =================================== */

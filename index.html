@@ -103,8 +103,8 @@
                         <li><a href="#how-it-works">How It Works</a></li>
                         <li><a href="#screenshot-section">The App</a></li>
                         <li><a href="#stay-tuned">Join</a></li>
-                        <li><a id="go-to-courier" href="/couriers">Be A Courier</a></li>
-                        <li><a id="go-to-business" href="/partners">For Businesses</a></li>
+                        <li><a class="reallink" id="go-to-courier" href="/couriers">Be A Courier</a></li>
+                        <li><a class="reallink" id="go-to-business" href="/partners">For Businesses</a></li>
                      </ul>
                   </div>
                </div>
@@ -128,7 +128,8 @@
                      <div class="intro-section">
                         <!-- WELCOM MESSAGE -->
                         <h1 class="intro">The easiest way to buy cannabis.</h1>
-                        <h5>Launching in Seattle in late 2014</h5>
+                        <h4>Launching in Seattle in late 2014.</h4>
+                        <h5>Enter your number below for a beta invite!</h5>
                         <!-- BUTTON -->
                         <section class="download">
                            <!-- SUBSCRIPTION FORM WITH TITLE -->
@@ -136,14 +137,15 @@
                               <!-- =====================
                                  MAILCHIMP FORM STARTS 
                                  ===================== -->
-                              <form class="subscription-form mailchimp form-inline wow fadeInRight animated animated" data-wow-offset="10" data-wow-duration="1.5s" role="form" novalidate="true" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
+                              <form class="subscription-form number-form form-inline wow fadeInRight animated animated" data-wow-offset="10" data-wow-duration="1.5s" role="form"  style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
                                  <!-- SUBSCRIPTION SUCCESSFUL OR ERROR MESSAGES -->
                                  <h4 class="subscription-success"></h4>
                                  <h4 class="subscription-error"></h4>
                                  <!-- EMAIL INPUT BOX -->
-                                 <input type="email" name="EMAIL" id="subscriber-email" placeholder="Your Email" class="form-control input-box">
+                                 <input type="tel" name="tel" placeholder="Your Number" class="number-input form-control input-box" required="required" autofocus>
+
                                  <!-- SUBSCRIBE BUTTON -->
-                                 <button type="submit" id="subscribe-button" class="btn btn-default standard-button">Join the movement</button>
+                                 <button type="submit" id="subscribe-button" class="btn btn-default standard-button">Join the Movement</button>
                               </form>
                               <!-- /END MAILCHIMP FORM STARTS -->
                            </div>
