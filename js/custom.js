@@ -50,7 +50,7 @@ $(".number-form").submit(function(e) {
         $.ajax({
             type: "POST",
             url: "https://api.canarydelivers.com/api/registernumber",
-            data: { "phoneNumber" : number }
+            data: { "phoneNumber" : number },
             success: function(data) {
                 println(data)
                 if(data["Code"] == 0) {
