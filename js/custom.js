@@ -52,14 +52,14 @@ $(".number-form").submit(function(e) {
             url: "https://api.canarydelivers.com/api/registernumber",
             data: { "phoneNumber" : number },
             success: function(data) {
-                println(data);
-                if(data["Code"] == 0) {
+                console.log(data)
+                if(data["Code"] === 0) {
                     $(".subscription-error").slideUp();
                     $(".subscription-success").slideDown().text("You're good to go. We'll text you a link to Canary soon!");
                     $(".number-form button[type=submit]").click(function(e) {
                         e.preventDefault;
                     });
-                } else if(data["Code"] == 1) {
+                } else if(data["Code"] === 1) {
                     $(".subscription-error").slideDown().text("Please enter a valid phone number.");
                 }
             },
