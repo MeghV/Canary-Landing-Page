@@ -211,7 +211,6 @@ var scrollAnimationTime = 1200,
     scrollAnimation = 'easeInOutExpo';
 $('a.scrollto').bind('click.smoothscroll', function(event) {
     console.log($(this))
-    event.preventDefault();
     var target = this.hash;
     $('html, body').stop().animate({
         'scrollTop': $(target).offset().top
@@ -220,12 +219,21 @@ $('a.scrollto').bind('click.smoothscroll', function(event) {
     });
 });
 
-$("a.reallink").unbind('click.smoothscroll', function() {
-    $(this).bind('click', function(e) {
-        console.log('activated');
-        return true;
-    })
-})
+$("#go-to-business").bind('click', function(e) {
+    window.location = "/partners";
+});
+
+$("#go-to-consumer").bind('click', function(e) {
+    window.location = "/";
+});
+
+
+// $("a.reallink").unbind('click.smoothscroll', function() {
+//     $(this).bind('click', function(e) {
+//         console.log('activated');
+//         return true;
+//     })
+// })
 /* =================================
 ===  WOW ANIMATION             ====
 =================================== */
