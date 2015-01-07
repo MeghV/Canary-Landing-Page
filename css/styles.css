@@ -607,6 +607,10 @@ header .intro-section .buttons {
     width: 100%;
 }
 
+.screenshots .section-header {
+    padding-bottom:15px !important;
+}
+
 
 /*---------------------------------------
    SECTION:  DOWNLOAD                 
